@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#7cb342</color>
+    <color name="primaryDarkColor">#4b830d</color>
+    <color name="secondaryColor">#c62828</color>
+    <color name="secondaryDarkColor">#8e0000</color>
+    <color name="primaryTextColor">#000000</color>
+    <color name="state_background_color">#757575</color>
+    <color name="state_background_text_color">#BDBDBD</color>
+    <color name="state_foreground_color">#64dd17</color>
+    <color name="state_foreground_text_color">#fafafa</color>
+    <color name="background_box_color">#eeeeee</color>
+</resources>

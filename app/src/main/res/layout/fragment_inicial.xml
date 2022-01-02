@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".UI.InicialFragment">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    <com.google.android.material.textfield.TextInputLayout
+       android:id="@+id/odtnro_tf"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textColorHint="@color/state_background_color"
+       android:layout_marginLeft="10dp"
+       android:layout_marginRight="10dp"
+       android:layout_marginEnd="10dp"
+       android:layout_marginStart="10dp"
+       android:layout_marginBottom="4dp"
+       android:hint="Numero de Orden de Trabajo"
+       app:endIconMode="clear_text"
+       app:boxBackgroundColor="@color/background_box_color"
+       app:startIconDrawable="@drawable/ic_build_black_24dp">
+    <com.google.android.material.textfield.TextInputEditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:textColor="@color/secondaryDarkColor"
+        />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/reclamo_tf"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginStart="10dp"
+        android:hint="Numero de Reclamo"
+        android:textColorHint="@color/state_background_color"
+        app:boxBackgroundColor="@color/background_box_color"
+        app:endIconMode="clear_text"
+        app:startIconDrawable="@drawable/ic_event_note_black_24dp">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/primaryTextColor" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_line_style_icons_camera"
+        />
+
+</LinearLayout>

@@ -1,0 +1,262 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 2,
+    "identityHash": "d97d7bb593eee1db5d8c0043837aa9c5",
+    "entities": [
+      {
+        "tableName": "detalles_odt",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idDetalleOdt` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `relaInforme` INTEGER NOT NULL, `relaZona` INTEGER NOT NULL, `relaMotivo` INTEGER NOT NULL, `numeroOdt` INTEGER NOT NULL, `estado` TEXT, `listaMateriales` TEXT, `fecha` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "idDetalleOdt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relaInforme",
+            "columnName": "relaInforme",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relaZona",
+            "columnName": "relaZona",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "relaMotivo",
+            "columnName": "relaMotivo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numeroOdt",
+            "columnName": "numeroOdt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "listaMateriales",
+            "columnName": "listaMateriales",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fecha",
+            "columnName": "fecha",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idDetalleOdt"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "informes",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idInforme` INTEGER NOT NULL, `descripcion` TEXT, PRIMARY KEY(`idInforme`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "idInforme",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idInforme"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "materiales",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idMaterial` INTEGER NOT NULL, `descripcion` TEXT, PRIMARY KEY(`idMaterial`))",
+        "fields": [
+          {
+            "fieldPath": "idMateriales",
+            "columnName": "idMaterial",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idMaterial"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "motivos",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idMotivo` INTEGER NOT NULL, `descripcion` TEXT, PRIMARY KEY(`idMotivo`))",
+        "fields": [
+          {
+            "fieldPath": "idMotivos",
+            "columnName": "idMotivo",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "descripcion",
+            "columnName": "descripcion",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idMotivo"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "odt_entity",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `numeroOdt` INTEGER NOT NULL, `numeroReclamo` TEXT, `fotoUrl` TEXT, `fecha` TEXT, `estado` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numeroOdt",
+            "columnName": "numeroOdt",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "numeroReclamo",
+            "columnName": "numeroReclamo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fotoUrl",
+            "columnName": "fotoUrl",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "fecha",
+            "columnName": "fecha",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "estado",
+            "columnName": "estado",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": true
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "zonas",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idZona` INTEGER NOT NULL, `nombre` TEXT, PRIMARY KEY(`idZona`))",
+        "fields": [
+          {
+            "fieldPath": "idZonas",
+            "columnName": "idZona",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idZona"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "users",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`idUser` INTEGER NOT NULL, `email` TEXT, `password` TEXT, PRIMARY KEY(`idUser`))",
+        "fields": [
+          {
+            "fieldPath": "idUser",
+            "columnName": "idUser",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "email",
+            "columnName": "email",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "password",
+            "columnName": "password",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "idUser"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd97d7bb593eee1db5d8c0043837aa9c5')"
+    ]
+  }
+}
